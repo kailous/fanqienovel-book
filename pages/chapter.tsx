@@ -7,9 +7,9 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 
 // 导入组件
-import TopBar from './components/topBar'; // 顶部栏
-import BottomBar from './components/bottomBar'; // 底部栏
-import Main from './components/main'; // 主体
+import TopBar from './components/TopBar'; // 顶部栏
+import BottomBar from './components/BottomBar'; // 底部栏
+import Main from './components/Main'; // 主体
 import Error from './components/Error'; // 导入 Error 组件
 import MyHead from './components/MyHead'; // 导入 MyHead 组件
 
