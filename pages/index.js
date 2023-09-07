@@ -35,11 +35,14 @@ const BookShelf = () => {
     return (
         <div>
             <MyHead bookInfo={bookInfo} />
-            {error && <Error message={error} />} {/* 渲染错误消息 */}
+            {error && <Error message={error} />}
+
             {bookInfo ? (
                 <>
                     <Info bookInfo={bookInfo} />
-                    {bookInfo.item_data_list && <Menu itemDataList={bookInfo.item_data_list} />}
+                    {bookInfo.item_data_list && (
+                        <Menu itemDataList={bookInfo.item_data_list} />
+                    )}
                 </>
             ) : (
                 <>
@@ -47,6 +50,7 @@ const BookShelf = () => {
                 </>
             )}
         </div>
+
     );
 };
 
