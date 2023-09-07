@@ -1,0 +1,14 @@
+div.main {
+    margin: 0 0 50px 0;
+    padding: 30px 15px 30px 15px;
+    background-color: var(--background-color2);
+    box-shadow: 0 100px 0 0 var(--background-color2); /* 背景延伸，防止穿帮。 */
+}
+div.main p {
+    line-height: 140%;
+}
+div.main br {
+    display: block;
+    content: "";
+    margin-bottom: 5px;
+}

@@ -1,0 +1,63 @@
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+ul.menu li {
+    width: 100%;
+    display: flex;
+    margin-right: 1rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+/*    上下描边*/
+    box-shadow: 0 -0.1px 0 0 var(--border-color),  /* 上边框 */
+    0 0.1px 0 0 var(--border-color);   /* 下边框 */
+
+/*    左右边距*/
+    padding-left: 5px;
+    padding-right: 15px;
+}
+ul.menu li a {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    align-self: stretch;
+    overflow: hidden;
+    width: 100%;
+    line-height: 3em;
+    text-decoration: none;
+    flex: 1 0 0;
+}
+ul.menu li span {
+    line-height: 3em;
+    opacity: 0.5;
+    flex: 0 0 auto;
+    margin-left: 1rem;
+}
+ul.menu li:hover {
+    background-color: var(--hover-background-color);
+}
+ul.menu li:hover > a,ul.menu li:hover > span {
+    color: var(--hover-text-color);
+    font-weight: bold;
+}
+/*a标签点击后在后面插入'已读'*/
+ul.menu li a:before {
+    content: '●';
+    font-size: 8px;
+    color: var(--weidu);
+    opacity: 1;
+    margin-right: 5px;
+}
+ul.menu li a:visited::before {
+    color: var(--yidu) !important;
+}
+ul.menu li:hover > a:before {
+    color: var(--hide-yidu) !important;
+}
+ul.menu li:hover > a:visited::before {
+    color: var(--yidu) !important;
+}
