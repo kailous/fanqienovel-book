@@ -1,12 +1,15 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './css/info.module.css'; // 使用相对路径导入CSS文件
 
 const Info = ({bookInfo}) => {
     return (
         <div className={styles.info}>
-            <img
+            <Image
                 src={bookInfo.book_info.audio_thumb_uri}
                 alt="书籍封面"
+                width="128" // 根据需要设置宽度
+                height="128" // 根据需要设置高度
             />
             <div className={styles.text}>
                 <div className={styles.title}>

@@ -3,14 +3,14 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const itemHandler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === 'GET') {
         try {
-            // 获取查询参数中的 item_id
+            // 获取查询参数中的 itemId
             const { itemId } = req.query;
 
             // 发送 GET 请求以获取章节内容
-            const response = await axios.get(`http://1693395060501.fqapi.jilulu.cn/content?item_id=${itemId}`);
+            const response = await axios.get(`//1693395060501.fqapi.jilulu.cn/content?item_id=${itemId}`);
 
             if (response.status === 200) {
                 // 提取所需的章节内容和相关信息
@@ -49,3 +49,4 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     }
 };
 
+export default itemHandler;
