@@ -46,11 +46,10 @@ const Chapter = () => {
     }, [itemId]);
 
     // 渲染
-    // @ts-ignore
     return (
         <div>
-            <MyHead bookInfo={bookInfo} />
-            {error && <Error message={error} />} {/*渲染错误消息*/}
+            <MyHead bookInfo={bookInfo} chapterData={chapterData} /> {/* 将 chapterData 传递给 MyHead 组件 */}
+            {error && <Error message={error} />}
             {chapterData && (
                 <>
                     <TopBar chapterData={chapterData} bookInfo={bookInfo} />
