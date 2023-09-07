@@ -1,7 +1,7 @@
 // components/Menu.jsx
 
 import React from 'react';
-import styles from './css/menu.module.css'; // 引入css文件
+import styles from './css/Menu.module.css'; // 引入css文件
 const Menu = ({ itemDataList }) => {
     return (
         <ul className={styles.menu}>

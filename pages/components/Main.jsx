@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './css/main.module.css'; // 使用相对路径导入CSS文件
+import styles from './css/Main.module.css'; // 使用相对路径导入CSS文件
 const Main = ({ chapterData }) => {
     return (
         <div className={styles.main}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './css/topBar.module.css'; // 使用相对路径导入CSS文件
+import styles from './css/TopBar.module.css'; // 使用相对路径导入CSS文件
 const TopBar = ({ chapterData,bookInfo }) => {
     const { order, serial_count } = chapterData.novel_data;
     // 计算进度百分比

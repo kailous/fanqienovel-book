@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import styles from './css/info.module.css'; // 使用相对路径导入CSS文件
+import styles from './css/Info.module.css'; // 使用相对路径导入CSS文件
 
 const Info = ({bookInfo}) => {
     return (

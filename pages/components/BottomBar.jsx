@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './css/bottomBar.module.css'; // 使用相对路径导入CSS文件
+import styles from './css/BottomBar.module.css'; // 使用相对路径导入CSS文件
 const BottomBar = ({ chapterData }) => {
 
     return (
