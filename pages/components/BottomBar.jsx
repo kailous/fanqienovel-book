@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './css/BottomBar.module.css'; // 使用相对路径导入CSS文件
 const BottomBar = ({ chapterData }) => {
-
+    if (!chapterData || !chapterData.novel_data) {
+        return null; // 或者可以返回一个默认的 UI，或者显示一个加载中的状态
+    }
     return (
         <div aria-hidden="true" className={styles.bottomBar}>
             {/* 判断pre_item_id是否为空 */}

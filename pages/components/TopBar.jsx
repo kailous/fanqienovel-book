@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from './css/TopBar.module.css'; // 使用相对路径导入CSS文件
 const TopBar = ({ chapterData,bookInfo }) => {
+    if (!chapterData || !chapterData.novel_data) {
+        return null; // 或者可以返回一个默认的 UI，或者显示一个加载中的状态
+    }
     const { order, serial_count } = chapterData.novel_data;
     // 计算进度百分比
     const progress = ((parseInt(order) / parseInt(serial_count)) * 100).toFixed(2);
