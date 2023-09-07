@@ -17,9 +17,9 @@ import MyHead from './components/MyHead'; // 导入 MyHead 组件
 const Chapter = () => {
     const router = useRouter();
     const { itemId } = router.query; // 从路由参数中获取 itemId
-    const [error, setError] = useState(null); // 错误消息
-    const [chapterData, setChapterData] = useState(null);
-    const [bookInfo, setBookInfo] = useState(null); // 书籍信息
+    const [error, setError] = useState<string | null>(null); // 错误消息
+    const [chapterData, setChapterData] = useState<any>(null); // 章节数据
+    const [bookInfo, setBookInfo] = useState<any>(null); // 书籍信息
 
     useEffect(() => {
         if (itemId) {
@@ -46,6 +46,7 @@ const Chapter = () => {
     }, [itemId]);
 
     // 渲染
+    // @ts-ignore
     return (
         <div>
             <MyHead bookInfo={bookInfo} />
