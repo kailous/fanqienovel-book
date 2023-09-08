@@ -26,7 +26,7 @@ const BookShelf = () => {
                 })
                 .catch((error) => {
                     console.error('获取图书信息失败：', error);
-                    setError('获取图书信息失败，请检查bookId是否正确，或者稍后再试。'); // 设置错误消息
+                    setError('获取图书信息失败，请检查<span>bookId</span>是否正确，或者稍后再试。'); // 设置错误消息
                 });
         }
     }, [bookId]);

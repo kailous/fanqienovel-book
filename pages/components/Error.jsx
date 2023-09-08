@@ -1,12 +1,18 @@
 // components/Error.jsx
 
 import React from 'react';
+import styles from './css/Error.module.css'
 
-const Error = ({ message }) => {
+const Error = ({message}) => {
     return (
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-            <strong className="font-bold">错误:</strong>
-            <span className="block sm:inline">{message}</span>
+        <div className={styles.errorBackground} role="alert">
+            <div className={styles.errorMessage}>
+                <div>
+                <h1>-    出错了    -</h1>
+                    <p dangerouslySetInnerHTML={{ __html: message }}></p>
+                </div>
+                <button onClick={() => window.location.href = '/'}>确定</button>
+            </div>
         </div>
     );
 };

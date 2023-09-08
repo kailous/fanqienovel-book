@@ -5,6 +5,7 @@
 :root {
     --background-color: hsla(0, 0%, 100%, 1);
     --background-color2: hsla(0, 0%, 90%, 1);
+    --error-background-color: hsla(0, 0%, 90%, 0.8);
     --progressBar: hsla(0, 0%, 90%, 1);
     --progress: hsla(0, 0%, 70%, 1);
     --text-color: hsla(0, 0%, 0%, 1);
@@ -23,6 +24,7 @@
     :root {
         --background-color: hsla(0, 0%, 0%, 1);
         --background-color2: hsla(0, 0%, 10%, 1);
+        --error-background-color: hsla(0, 0%, 10%, 0.8);
         --progressBar: hsla(0, 0%, 10%, 1);
         --progress: hsla(0, 0%, 30%, 1);
         --text-color: hsla(0, 0%, 100%, 1);

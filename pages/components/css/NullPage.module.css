@@ -11,8 +11,9 @@ div.nullPage header {
     display: flex;
     padding: 20px;
     align-items: center;
-    gap: 20px;
-    align-self: stretch;
+    align-content: center;
+    gap: 40px 20px;
+    flex-wrap: wrap;
     background-color: var(--background-color2);
     position: fixed;
     width: 100%;
@@ -20,6 +21,7 @@ div.nullPage header {
 }
 div.nullPage header svg.logo {
     width: 128px;
+    height: 128px;
     border-radius: 30px;
     box-shadow: 0 24px 34px -10px rgba(0, 0, 0, 0.15);
 }
@@ -59,14 +61,41 @@ div.nullPage header div.info p {
 }
 div.nullPage header div.info svg.by {
     height: 16px;
-    width: 100px;
+    width: 105px;
     color: var(--text-color);
+}
+div.left {
+    display: flex;
+    min-width: 375px;
+    align-items: center;
+    gap: 20px;
+    flex: 1 0 0;
+}
+div.right {
+    display: flex;
+    padding-right: 0;
+    align-items: flex-start;
+    gap: 20px;
+}
+svg.next {
+    width: 119px;
+}
+svg.vercel {
+    width: 107px;
+}
+svg.github {
+    width: 90px;
+}
+svg.technology {
+    height: 24px;
+    color: var(--text-color);
+    opacity: 0.5;
 }
 div.nullPage main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* 垂直和水平居中对齐 */
     gap: 10px;
     flex: 1; /* 使用 flex 属性 */
     align-self: stretch;
@@ -74,18 +103,28 @@ div.nullPage main {
 }
 div.nullPage main form {
     display: flex;
-    width: 70%;
-    border-radius: 10px;
-    overflow: hidden;
+    width: 100%;
+    max-width: 650px;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 0 auto;
 }
 div.nullPage main form input {
     display: flex;
-    padding: 10px;
+    min-width: 300px;
+    padding: 15px;
     align-items: center;
     gap: 10px;
     flex: 1 0 0;
+    border-radius: 10px;
     background-color: var(--background-color2);
     border: none;
+    color: var(--text-color);
 }
 div.nullPage main form input:focus {
     color: var(--high-color);
@@ -93,23 +132,34 @@ div.nullPage main form input:focus {
 }
 div.nullPage main form button {
     display: flex;
-    padding: 10px 20px;
+    min-width: 100px;
+    padding: 15px 60px;
+    justify-content: center;
     align-items: center;
     gap: 10px;
+    border-radius: 10px;
     background-color:var(--high-color);
     color: #FFFFFF;
 }
 div.nullPage footer {
     display: flex;
     padding: 20px;
-    flex-direction: column;
     align-items: flex-start;
-    gap: 11px;
-    align-self: stretch;
+    align-content: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
     background-color: var(--background-color2);
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+div.nullPage footer div.text {
+    display: flex;
+    min-width: 390px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+    flex: 1 0 0;
 }
 div.nullPage footer h2 {
     display: -webkit-box;
@@ -149,7 +199,6 @@ div.nullPage span {
 }
 div.nullPage footer p {
     display: -webkit-box;
-    width: 354px;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
