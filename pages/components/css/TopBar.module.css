@@ -32,7 +32,6 @@ div.title h1 {
     align-self: stretch;
     color: var(--text-color);
     font-size: 20px;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
@@ -40,7 +39,6 @@ div.title h3 {
     align-self: stretch;
     color: var(--text-color);
     font-size: 10px;
-    font-style: normal;
     font-weight: 400;
     line-height: normal;
     opacity: 0.5;
@@ -64,7 +62,6 @@ div.progressText {
     align-items: flex-start;
     gap: 1px;
     font-size: 8px;
-    font-style: normal;
     font-weight: 400;
     line-height: normal;
     color: var(--progressBar-text-color);

@@ -41,6 +41,7 @@ const Chapter = () => {
                 .catch((error) => {
                     console.error('获取章节内容失败:', error);
                     setError('获取章节内容失败，来到了没有内容的荒原，请返回目录重试！'); // 设置错误消息
+                    const href = '/';
                 });
         }
     }, [itemId]);
@@ -49,7 +50,7 @@ const Chapter = () => {
     return (
         <div>
             <MyHead bookInfo={bookInfo} chapterData={chapterData} /> {/* 将 chapterData 传递给 MyHead 组件 */}
-            {error && <Error message={error} />}
+            {error && <Error message={error} href="/" />}
             {chapterData && (
                 <>
                     <TopBar chapterData={chapterData} bookInfo={bookInfo} />

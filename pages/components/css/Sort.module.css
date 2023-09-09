@@ -1,0 +1,25 @@
+div.surt {
+    position: fixed;
+    z-index: 9999;
+    right: 30px; /* 调整右边距 */
+    bottom: 30px; /* 调整底边距 */
+    /* 其他样式属性，如背景颜色、边框等 */
+}
+div.surt button {
+    display: flex;
+    padding: 15px;
+    border-radius: 100px;
+    background-color: var(--background-color-fx);
+    backdrop-filter: blur(5px);
+}
+div.surt button svg {
+    width: 24px;
+    height: 24px;
+    color: var(--text-color-fx);
+}
+div.surt button:hover {
+    background-color: var(--high-color);
+}
+div.surt button:hover > svg {
+    color: var(--text-color);
+}

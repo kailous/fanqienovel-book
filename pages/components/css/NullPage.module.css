@@ -42,7 +42,6 @@ div.nullPage header div.info h1 {
     color: var(--text-color);
     text-overflow: ellipsis;
     font-size: 32px;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
@@ -55,7 +54,6 @@ div.nullPage header div.info p {
     opacity: 0.5;
     text-overflow: ellipsis;
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 14.4px */
 }
@@ -170,7 +168,6 @@ div.nullPage footer h2 {
     /*color: #000;*/
     text-overflow: ellipsis;
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
     line-height: 120%; /* 19.2px */
 }
@@ -184,7 +181,6 @@ div.nullPage footer div.box {
     background-color: var(--background-color);
     color: var(--text-color);
     font-size: 10px;
-    font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 12px */
 }
@@ -205,7 +201,6 @@ div.nullPage footer p {
     /*color: #858585;*/
     text-overflow: ellipsis;
     font-size: 12px;
-    font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 14.4px */
 }

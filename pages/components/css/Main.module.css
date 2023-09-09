@@ -6,9 +6,10 @@ div.main {
 }
 div.main p {
     line-height: 140%;
+    font-size: 20px;
 }
 div.main br {
     display: block;
     content: "";
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
