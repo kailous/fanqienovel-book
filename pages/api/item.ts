@@ -10,7 +10,7 @@ const itemHandler = async (req: NextApiRequest, res: NextApiResponse) => {
             const { itemId } = req.query;
 
             // 发送 GET 请求以获取章节内容
-            const response = await axios.get(`//1694254711466.fqapi.jilulu.cn/content?item_id=${itemId}`);
+            const response = await axios.get(`//list.fqapi.jilulu.cn/content?item_id=${itemId}`);
 
             if (response.status === 200) {
                 // 提取所需的章节内容和相关信息
