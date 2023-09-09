@@ -20,6 +20,6 @@ div.surt button svg {
 div.surt button:hover {
     background-color: var(--high-color);
 }
-div.surt button:hover > svg {
+div.surt button:hover > div.surt button svg {
     color: var(--text-color);
 }
