@@ -38,7 +38,7 @@ const MyHead = ({bookInfo,chapterData}) => {
             {/* 更多社交媒体平台的 meta 标签 */}
 
             {/* 字节图标库 */}
-            <script src="https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_28288_10.2343bf8607d80590eee0932463e873c9.js" async></script>
+            <script src="https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_28288_12.070b11c9463ecd8a831249ab6f3d5d43.js" async></script>
         </Head>
     );
 };
