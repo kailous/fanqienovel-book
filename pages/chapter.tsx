@@ -5,6 +5,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import styles from './styles/Chapter.module.css'
 
 // 导入组件
 import TopBar from './components/TopBar'; // 顶部栏
@@ -45,10 +46,18 @@ const Chapter = () => {
                 });
         }
     }, [itemId]);
+    useEffect(() => {
+        // 在组件加载时应用body样式
+        document.body.classList.add(styles.chapterBody);
 
+        // 在组件卸载时删除body样式
+        return () => {
+            document.body.classList.remove(styles.chapterBody);
+        };
+    }, []);
     // 渲染
     return (
-        <div>
+        <div className={styles.chapter}>
             <MyHead bookInfo={bookInfo} chapterData={chapterData} /> {/* 将 chapterData 传递给 MyHead 组件 */}
             {error && <Error message={error} href="/" />}
             {chapterData && (

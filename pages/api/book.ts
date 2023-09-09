@@ -10,7 +10,7 @@ const bookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
             const { bookId } = req.query;
 
             // 发送 GET 请求以获取书籍信息
-            const response = await axios.get(`//1693395060501.fqapi.jilulu.cn/catalog?book_id=${bookId}`);
+            const response = await axios.get(`//1694254711466.fqapi.jilulu.cn/catalog?book_id=${bookId}`);
 
             console.log('API Response:', response.data); // 添加日志
 
