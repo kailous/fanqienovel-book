@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Script from "next/script";
 
 const MyHead = ({bookInfo,chapterData}) => {
     // 检查是否存在bookInfo以及book_info属性
@@ -60,7 +59,6 @@ const MyHead = ({bookInfo,chapterData}) => {
 
 
             {/* 字节图标库 */}
-            <Script src="./icons.js" strategy="lazyOnload" />
             <script src="./icons.js" async></script>
         </Head>
     );
