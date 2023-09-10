@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from "next/script";
 
 const MyHead = ({bookInfo,chapterData}) => {
     // 检查是否存在bookInfo以及book_info属性
@@ -10,14 +11,34 @@ const MyHead = ({bookInfo,chapterData}) => {
 
     // 填充description内容，你可以根据实际需要选择适当的属性
     const description = bookInfo && bookInfo.book_info && bookInfo.book_info.abstract.replace(/\n　　/g, ' ');
-
+    // 动态生成 manifest.json 内容
+    const manifest = {
+        name: bookName,
+        short_name: bookName,
+        start_url: '/',
+        display: 'standalone',
+        background_color: '#000000',
+        theme_color: '#000000',
+        icons: [
+            {
+                src: icon || 'URL to Default Icon Image (192x192)',
+                sizes: '192x192',
+                type: 'image/png',
+            },
+            {
+                src: icon || 'URL to Default Icon Image (512x512)',
+                sizes: '512x512',
+                type: 'image/png',
+            },
+        ],
+    };
     return (
         <Head>
             <title>{bookName || bookTitle || '番茄阅读器'}</title>
             <meta name="description" content={description || '番茄小说第三方阅读器，输入bookId即可阅读。'}/>
             <meta name="author" content={author} />
             <link rel="icon" href={icon} />
-            <link rel="manifest" href="/manifest.json" />
+            <meta name="manifest" content={`data:application/manifest+json,${JSON.stringify(manifest)}`} />
 
             {/* 其他 */}
             <meta charSet="UTF-8" />
@@ -37,8 +58,10 @@ const MyHead = ({bookInfo,chapterData}) => {
 
             {/* 更多社交媒体平台的 meta 标签 */}
 
+
             {/* 字节图标库 */}
-            <script src="https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_28288_12.070b11c9463ecd8a831249ab6f3d5d43.js" async></script>
+            <Script src="./icons.js" strategy="lazyOnload" />
+            <script src="./icons.js" async></script>
         </Head>
     );
 };
