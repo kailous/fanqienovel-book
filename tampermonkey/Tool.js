@@ -2,7 +2,7 @@
 // @name         RainForest 番茄阅读助手
 // @namespace    https://books.rainforest.org.cn/
 // @version      1.0
-// @description  一键跳转到 Rainforest 番茄阅读器，没有广告，更纯净。 可以在网页端阅读所有章节，不过如果遇到特别喜欢的，还是建议去官方支持一下作者哈。
+// @description  一键跳转到 Rainforest 番茄阅读器，没有广告，更纯净。 可以在网页端阅读所有章节，不过如果遇到特别喜欢的，还是建议去官方支持一下作者哈。如果遇到无法访问的问题，可能是网络原因，最近发现部分地区的网络服务商屏蔽了域名，可以尝试更换网络。（ 服务是使用 vercel 部署的，目前没有解决方法，因为众所周知的原因。 ）
 // @author       RainForest
 // @match        https://fanqienovel.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=fanqienovel.com
