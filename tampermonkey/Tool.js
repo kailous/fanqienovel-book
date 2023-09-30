@@ -14,8 +14,10 @@ window.onload = function () {
 
     // 获取当前页面的 URL
     const url = window.location.href;
+
     // 获取URL中的数字
     const num = url.match(/\d+/g);
+
     // SVG 图标
     const svgIcon = `
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,9 +25,11 @@ window.onload = function () {
             <path d="M13.1119 11.7833C13.9859 10.9572 14.5312 9.78708 14.5312 8.48956C14.5312 5.98702 12.5025 3.95831 10 3.95831H6.67708C6.25413 3.95831 6.04265 3.95831 5.8811 4.04063C5.739 4.11303 5.62347 4.22856 5.55106 4.37066C5.46875 4.53221 5.46875 4.74369 5.46875 5.16665V14.8333C5.46875 15.2563 5.46875 15.4677 5.55106 15.6293C5.62347 15.7714 5.739 15.8869 5.8811 15.9593C6.04265 16.0416 6.25413 16.0416 6.67708 16.0416H12.8549C13.4209 16.0416 13.7039 16.0416 13.8897 15.9232C14.0523 15.8194 14.169 15.6574 14.216 15.4704C14.2697 15.2567 14.1802 14.9882 14.0012 14.4512L13.1119 11.7833Z" fill="white"/>
         </svg>
     `;
+
     // 判断链接类型(如果链接中包含page则为书籍详情页，如果链接中包含reader则为章节内容页)
     if (url.indexOf('fanqienovel.com/page') !== -1) {
         // alert('这是书籍详情页');
+
         // 创建跳转链接
         const newUrl = 'https://books.rainforest.org.cn/?bookId=' + num; // 书籍详情页
 
@@ -65,10 +69,13 @@ window.onload = function () {
         function handleButtonClick() {
             window.location.href = newUrl;
         }
+
         // 创建跳转链接
         const newUrl = 'https://books.rainforest.org.cn/chapter?itemId=' + num; // 章节内容页
+
         // 找到阅读工具栏
         const toolbar = document.querySelector('#app .reader-toolbar > div');
+
         // 创建按钮
         const autoScrollBtn = document.createElement('div');
         autoScrollBtn.className = 'reader-toolbar-item rainforest';
